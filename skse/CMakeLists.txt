@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(InstantWorldMap VERSION 1.0.0 LANGUAGES CXX)
+project(ReduceMotionMap VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,7 +17,7 @@ if(NOT COMMAND add_commonlibsse_plugin)
 endif()
 
 add_commonlibsse_plugin(${PROJECT_NAME}
-	NAME "InstantWorldMap"
+	NAME "ReduceMotionMap"
 	AUTHOR "eXgamble"
 	SOURCES src/plugin.cpp src/WorldMap.cpp)
 

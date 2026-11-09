@@ -1,4 +1,4 @@
-# Instant World Map
+# Reduce Motion Map
 
 The world map opens outdoors the way it already does indoors: it fades in at map height, without the camera flying up
 from your character first.

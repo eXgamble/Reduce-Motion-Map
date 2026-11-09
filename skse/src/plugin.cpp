@@ -1,4 +1,4 @@
-// Instant World Map: SKSE plugin.
+// Reduce Motion Map: SKSE plugin.
 
 #include "WorldMap.h"
 
@@ -11,7 +11,7 @@ namespace
 		if (!path) {
 			SKSE::stl::report_and_fail("Failed to find the SKSE log directory"sv);
 		}
-		*path /= "InstantWorldMap.log"sv;
+		*path /= "ReduceMotionMap.log"sv;
 
 		auto sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true);
 		auto log = std::make_shared<spdlog::logger>("global log"s, std::move(sink));
@@ -25,11 +25,11 @@ namespace
 SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	InitializeLog();
-	logger::info("InstantWorldMap loading on game runtime {}", a_skse->RuntimeVersion().string("."));
+	logger::info("ReduceMotionMap loading on game runtime {}", a_skse->RuntimeVersion().string("."));
 
 	SKSE::Init(a_skse, false);
 	WorldMap::Install();
 
-	logger::info("InstantWorldMap loaded");
+	logger::info("ReduceMotionMap loaded");
 	return true;
 }
