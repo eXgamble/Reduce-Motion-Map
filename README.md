@@ -1,12 +1,14 @@
 # Reduce Motion Map
 
-The world map opens outdoors the way it already does indoors: it fades in at map height, without the camera flying up
-from your character first.
+The world map opens and closes without the camera flying. Opening, it fades in at map height instead of flying up from
+your character; closing, it fades to black at map height instead of diving back down to you.
 
-Indoors, Skyrim's map camera starts its zoom right next to where it ends, so the map simply fades in. Outdoors it starts
-at your character and flies up to map height. This SKSE plugin sets the zoom's start to its end the moment it begins,
-so it has nothing to do. The map ends on exactly the same view as before. Closing the map, zooming, panning and fast
-travel are untouched.
+Skyrim's map camera zooms between your character and map height each time the map opens or closes. Outdoors the
+opening zoom starts at your character and flies up; closing the world map (indoors or out) dives back down while the
+map darkens. This SKSE plugin keeps the camera at map height for both: the opening zoom starts where it ends, and the
+closing zoom is held at map height until it ends, behind the game's own fade to black. The map shows exactly the same
+view as before, and the game's own fades and timing stay as they are. Zooming, panning, the local map and fast travel
+are untouched.
 
 No settings, no plugin file, and nothing runs while the map is closed.
 
@@ -18,8 +20,8 @@ No settings, no plugin file, and nothing runs while the map is closed.
 
 ## Compatibility
 
-It changes only where the map camera's opening zoom starts. Mods that change the map's look (map textures, weather,
-markers) work alongside it. A mod that hooks the same opening zoom may conflict.
+It changes only the map camera's opening and closing zoom. Mods that change the map's look (map textures, weather,
+markers) work alongside it. A mod that hooks the same zoom may conflict.
 
 ## Building
 
